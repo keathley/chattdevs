@@ -9,6 +9,8 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
+gem 'omniauth'
+gem 'omniauth-github'
 
 group :production do
   gem 'pg'
