@@ -9,6 +9,8 @@ describe User do
   it { must have_db_column(:provider) }
   it { must have_db_column(:uid) }
   it { must have_db_column(:name) }
+  it { must have_db_column(:email) }
+  it { must have_db_column(:nickname) }
 
   describe ".from_omniauth" do
 
