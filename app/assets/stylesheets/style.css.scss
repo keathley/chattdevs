@@ -1,0 +1,52 @@
+// Body
+body {
+  color: #526066;
+  background: #f0f0f0;
+}
+
+// Content
+
+.content {
+  margin: 0 auto;
+  max-width: 1200px;
+  margin-top: 38px;
+  padding-top: 20px;
+}
+
+// User
+
+.users-list {
+
+  .user {
+
+    .user-inner {
+      background: white;
+      border: 1px solid #cecece;
+      border-radius: 4px;
+      margin: 20px;
+    }
+
+    .user-data {
+      padding: 20px;
+      display: inline-block;
+
+      .user-name {
+        display: inline-block;
+        vertical-align: top;
+        // margin-top: 0;
+        // padding-top: 5px;
+        padding-left: 10px;
+      }
+    }
+
+    .user-avatar {
+      padding: 10px;
+    }
+  }
+}
+
+// Misc.
+
+.gravatar {
+  border-radius: 4px;
+}

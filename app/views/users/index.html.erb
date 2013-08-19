@@ -1,8 +1,3 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
-
-<%= link_to "Sign in through github", "/auth/github" %>
-
-<% if current_user %>
-  <p><%= current_user.name %></p>
-<% end %>
+<div class="users-list pure-g-r">
+  <%= render @users %>
+</div>
