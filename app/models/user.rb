@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  include FeatureFlags
 
   def self.from_omniauth(auth)
     where(auth.slice("provider", "uid")).first || create_from_omniauth(auth)

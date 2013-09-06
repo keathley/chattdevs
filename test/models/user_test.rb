@@ -11,6 +11,7 @@ describe User do
   it { must have_db_column(:name) }
   it { must have_db_column(:email) }
   it { must have_db_column(:nickname) }
+  it { must have_db_column(:admin) }
 
   describe ".from_omniauth" do
 
