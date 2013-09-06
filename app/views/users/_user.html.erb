@@ -1,8 +1,14 @@
 <li class="user">
   <div class="user-inner">
     <div class="user-data">
-      <%= link_to user do %>
-        <%= gravatar_for(user, :size => 175) %>
+      <% if profiles_enabled? %>
+        <%= link_to user do %>
+          <%= gravatar_for(user, :size => 175) %>
+        <% end %>
+      <% else %>
+        <%= link_to github_profile_for user do %>
+          <%= gravatar_for(user, :size => 175) %>
+        <% end %>
       <% end %>
     </div>
   </div>
