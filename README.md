@@ -1,28 +1,27 @@
-== README
+# ChattDevs
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## About
 
-Things you may want to cover:
+ADD ABOUT SECTION
 
-* Ruby version
+## Installation and Technical
 
-* System dependencies
+The app is currently running on Ruby 2.0 and Rails 4.  Installation is straight forward
 
-* Configuration
+    $ bundle install
+    $ rake db:populate
+    $ rails s
+    
+You should now have a running rails server with a seeded database.
 
-* Database creation
+### Omniauth
 
-* Database initialization
+We use omniauth to allow people to sign in through github.
 
-* How to run the test suite
+ADD SECTION HERE ABOUT SETTING THAT UP
+    
+## Contributing
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ADD CONTRIBUTION GUIDELINES
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
