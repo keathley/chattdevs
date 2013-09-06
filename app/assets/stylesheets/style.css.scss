@@ -1,46 +1,121 @@
+// Variables and Mixins
+$max-width: 1200px;
+$min-width: 720px;
+
+// Typography
+@font-face {
+    font-family: 'ChatypeB2.1BoldBold';
+    src: url('chatypeb2.1bold-webfont.eot');
+    src: url('chatypeb2.1bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('chatypeb2.1bold-webfont.woff') format('woff'),
+         url('chatypeb2.1bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ChatypeB2.1MediumMedium';
+    src: url('chatypeb2.1medium-webfont.eot');
+    src: url('chatypeb2.1medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('chatypeb2.1medium-webfont.woff') format('woff'),
+         url('chatypeb2.1medium-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ChatypeB2.1RegularRegular';
+    src: url('chatypeb2.1regular-webfont.eot');
+    src: url('chatypeb2.1regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('chatypeb2.1regular-webfont.woff') format('woff'),
+         url('chatypeb2.1regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 // Body
 body {
-  color: #526066;
-  background: #f0f0f0;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue", "Helvetica", sans-serif;
 }
 
 // Content
 
 .content {
   margin: 0 auto;
-  max-width: 1200px;
-  margin-top: 38px;
-  padding-top: 20px;
+  max-width: $max-width;
+  min-width: $min-width;
+}
+
+// Header
+
+.header {
+  margin: 0 auto;
+  max-width: $max-width;
+  min-width: $min-width;
+  margin-top: 35px;
+
+  a {
+    // color: #7F8C8D;
+    color: #575F5F;
+    text-decoration: none;
+  }
+
+  .header-title {
+    display: block;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 53pt;
+    font-family: 'ChatypeB2.1BoldBold';
+    line-height: 1;
+    padding: 30px 0;
+  }
 }
 
 // User
 
 .users-list {
+  list-style: none;
+  padding-left: 0;
 
   .user {
+    float: left;
+    position: relative;
+    margin: 0 20px 20px 0;
 
     .user-inner {
-      background: white;
-      border: 1px solid #cecece;
-      border-radius: 4px;
-      margin: 20px;
+
     }
 
     .user-data {
-      padding: 20px;
-      display: inline-block;
+      // text-align: center;
 
       .user-name {
-        display: inline-block;
-        vertical-align: top;
-        // margin-top: 0;
-        // padding-top: 5px;
-        padding-left: 10px;
+        text-align: center;
+        font-size: 18px;
       }
     }
 
-    .user-avatar {
-      padding: 10px;
+    .user-meta {
+
+      .skills {
+        list-style: none;
+      }
+    }
+  }
+}
+
+// Profile
+
+.profile {
+
+  .profile-title {
+
+    .profile-name {
+      font-size: 50px;
     }
   }
 }
@@ -48,5 +123,5 @@ body {
 // Misc.
 
 .gravatar {
-  border-radius: 4px;
+  border-radius: 2px;
 }
