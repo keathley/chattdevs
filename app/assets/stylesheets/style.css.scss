@@ -43,15 +43,14 @@ body {
 }
 
 // Content
-
 .content {
   margin: 0 auto;
   max-width: $max-width;
   min-width: $min-width;
+  padding: 0 50px;
 }
 
 // Header
-
 .header {
   margin: 0 auto;
   max-width: $max-width;
@@ -59,7 +58,6 @@ body {
   margin-top: 35px;
 
   a {
-    // color: #7F8C8D;
     color: #575F5F;
     text-decoration: none;
   }
@@ -76,8 +74,27 @@ body {
   }
 }
 
-// User
+// Footer
+.footer {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+  background: black;
+  color: white;
 
+  .nav {
+    list-style: none;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+// User
 .users-list {
   list-style: none;
   padding-left: 0;
@@ -145,4 +162,8 @@ body {
 
 .gravatar {
   border-radius: 2px;
+}
+
+.pull-right {
+  float: right;
 }
