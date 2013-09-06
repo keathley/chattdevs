@@ -6,8 +6,13 @@
           <%= gravatar_for(user, :size => 175) %>
         <% end %>
       <% else %>
-        <%= link_to github_profile_for user do %>
+        <%= link_to github_profile_for(user) do %>
           <%= gravatar_for(user, :size => 175) %>
+          <div class="user-info">
+            <span class="user-info-name">
+              <%= user.name %>
+            </span>
+          </div>
         <% end %>
       <% end %>
     </div>
