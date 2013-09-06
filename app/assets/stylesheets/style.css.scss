@@ -1,7 +1,7 @@
 // Variables and Mixins
 $max-width: 1200px;
 $min-width: 720px;
-$image-size: 175px;
+$image-size: 190px;
 
 // Typography
 @font-face {
@@ -91,17 +91,31 @@ body {
       text-align: center;
 
       .user-info {
-        background: rgba(0, 0, 0, 0.8);
-        padding: 5px 0;
+        // display: none;
+        opacity: 0;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 15px 0;
         position: absolute;
         left: 0;
-        // top: 160px;
         width: $image-size;
-        bottom: 0;
+        bottom: 3px;
+        border-bottom-right-radius: 2px;
+        border-bottom-left-radius: 2px;
+        transition: opacity .25s ease-in-out;
+        -moz-transition: opacity .25s ease-in-out;
+        -webkit-transition: opacity .25s ease-in-out;
 
         .user-info-name {
           color: white;
           text-decoration: none;
+        }
+      }
+
+      .user-link:hover {
+
+        .user-info {
+          // display: block;
+          opacity: 1;
         }
       }
     }

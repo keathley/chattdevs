@@ -3,16 +3,11 @@
     <div class="user-data">
       <% if profiles_enabled? %>
         <%= link_to user do %>
-          <%= gravatar_for(user, :size => 175) %>
+          <%= render :partial => 'users/user_inner', :locals => {:user => user}  %>
         <% end %>
       <% else %>
-        <%= link_to github_profile_for(user) do %>
-          <%= gravatar_for(user, :size => 175) %>
-          <div class="user-info">
-            <span class="user-info-name">
-              <%= user.name %>
-            </span>
-          </div>
+        <%= link_to github_profile_for(user), class: "user-link" do %>
+          <%= render :partial => 'users/user_inner', :locals => {:user => user}  %>
         <% end %>
       <% end %>
     </div>
