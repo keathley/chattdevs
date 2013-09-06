@@ -10,16 +10,10 @@ The app is currently running on Ruby 2.0 and Rails 4.  Installation is straight 
 
     $ bundle install
     $ rake db:populate
-    $ rails s
-    
+    $ foreman start
+
 You should now have a running rails server with a seeded database.
 
-### Omniauth
-
-We use omniauth to allow people to sign in through github.
-
-ADD SECTION HERE ABOUT SETTING THAT UP
-    
 ## Contributing
 
 ADD CONTRIBUTION GUIDELINES
