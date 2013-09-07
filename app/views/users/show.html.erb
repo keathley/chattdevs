@@ -1,8 +1,19 @@
 <div class="profile">
   <div class="profile-title">
-    <%= gravatar_for @user %>
-    <span class="profile-name"><%= @user.name %></span>
+    <%= gravatar_for @user, size: 55 %>
+    <span class="profile-name">
+      <%= link_to @user.name, "#{github_profile_for @user}" %>
+    </span>
   </div>
   <div class="profile-description">
   </div>
+  <% if @user == current_user %>
+  <div class="profile-settings">
+    <%= link_to "Remove my listing",
+                user_path(@user),
+                class: "pure-button pure-button-error",
+                method: :delete,
+                confirm: "Are you sure you want to remove your listing?" %>
+  </div>
+  <% end %>
 </div>

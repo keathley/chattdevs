@@ -9,7 +9,9 @@
 <body>
   <div class="content">
     <%= render 'layouts/header' %>
-    <%= yield %>
+    <div class="inner-container">
+      <%= yield %>
+    </div>
     <%= render 'layouts/footer' %>
   </div>
   <%= javascript_include_tag "application" %>

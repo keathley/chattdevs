@@ -1,17 +1,19 @@
-require 'test_helper'
+require 'spec_helper'
 
 describe User do
-
-  let(:user) { User.new }
+  let(:user) { create(:user) }
 
   subject { user }
 
-  it { must have_db_column(:provider) }
-  it { must have_db_column(:uid) }
-  it { must have_db_column(:name) }
-  it { must have_db_column(:email) }
-  it { must have_db_column(:nickname) }
-  it { must have_db_column(:admin) }
+  it { should have_db_column(:provider) }
+  it { should have_db_column(:uid) }
+  it { should have_db_column(:name) }
+  it { should have_db_column(:email) }
+  it { should have_db_column(:nickname) }
+  it { should have_db_column(:admin) }
+
+  specify { User.should respond_to(:from_omniauth) }
+  specify { User.should respond_to(:create_from_omniauth) }
 
   describe ".from_omniauth" do
 
@@ -21,7 +23,7 @@ describe User do
                "info" => { :nickname => user.name}
              }
       new_user = User.from_omniauth(auth)
-      new_user.wont_be_nil
+      new_user.should_not be_nil
     end
   end
 
@@ -33,7 +35,7 @@ describe User do
                "info" => { :nickname => user.name}
              }
       new_user = User.create_from_omniauth(auth)
-      new_user.must_be :valid?
+      new_user.should be_valid
     end
   end
 end
