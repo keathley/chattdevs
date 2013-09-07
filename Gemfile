@@ -12,6 +12,7 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
+gem 'purecss-rails'
 
 # Misc.
 gem 'faker'
@@ -23,13 +24,13 @@ end
 
 group :development, :test do
   gem 'sqlite3'
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', "~> 4.0"
+  gem 'rspec-rails', "~> 2.12"
 end
 
 group :test do
-  gem 'minitest', '~> 4.7'
-  gem "minitest-rails-shoulda"
-  gem 'minitest-colorize'
+  gem 'capybara', "~> 2.1"
+  gem 'shoulda-matchers'
 end
 
 group :doc do

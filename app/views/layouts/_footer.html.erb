@@ -4,6 +4,9 @@
       <li>
         <%= link_to current_user.name, current_user %>
       </li>
+      <li>
+        <%= link_to "Signout", signout_path %>
+      </li>
     <% else %>
       <li>
         <%= link_to "+ Add yourself through Github", "/auth/github" %>

@@ -1,8 +1,8 @@
 <li class="user">
   <div class="user-inner">
     <div class="user-data">
-      <% if profiles_enabled? %>
-        <%= link_to user do %>
+      <% if user == current_user %>
+        <%= link_to user, class: "user-link" do %>
           <%= render :partial => 'users/user_inner', :locals => {:user => user}  %>
         <% end %>
       <% else %>
