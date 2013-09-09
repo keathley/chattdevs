@@ -6,6 +6,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'foreman'
+gem 'kaminari'
 
 # Assets
 gem 'sass-rails', '~> 4.0.0'
