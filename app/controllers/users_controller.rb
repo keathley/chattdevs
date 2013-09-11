@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_filter :ensure_correct_user, :only => [:show, :destroy]
 
   def index
-    @users = User.all.shuffle
+    @users = User.order(:name).page(params[:page]).per(12)
   end
 
   def show

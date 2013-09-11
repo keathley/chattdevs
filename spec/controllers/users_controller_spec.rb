@@ -4,10 +4,23 @@ describe UsersController do
   let(:user) { create(:user) }
 
   describe "GET #index" do
+    before do
+      users = (1..30).map { create(:user) }
+    end
+
+    after { User.destroy_all }
+
     it "assigns @users" do
       get :index
-      expect(assigns(:users)).to eq([user])
+      expect(assigns(:users)).to_not be_nil
     end
+
+    it "should only have a paginated list of users" do
+      User.should_receive(:page).and_call_original
+      get :index
+    end
+
+    it "should list the users in random order"
   end
 
   describe "GET #show" do
