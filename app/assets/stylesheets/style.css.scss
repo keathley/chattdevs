@@ -106,6 +106,17 @@ body {
       }
     }
   }
+
+  #byline {
+    float: right;
+    padding-right: 10px;
+    font-size: 14px;
+
+    a {
+      color: #bfbfbf;
+      // text-decoration: none;
+    }
+  }
 }
 
 // User
