@@ -3,40 +3,6 @@ $max-width: 1200px;
 $min-width: 720px;
 $image-size: 190px;
 
-// Typography
-@font-face {
-    font-family: 'ChatypeB2.1BoldBold';
-    src: url('chatypeb2.1bold-webfont.eot');
-    src: url('chatypeb2.1bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('chatypeb2.1bold-webfont.woff') format('woff'),
-         url('chatypeb2.1bold-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'ChatypeB2.1MediumMedium';
-    src: url('chatypeb2.1medium-webfont.eot');
-    src: url('chatypeb2.1medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('chatypeb2.1medium-webfont.woff') format('woff'),
-         url('chatypeb2.1medium-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'ChatypeB2.1RegularRegular';
-    src: url('chatypeb2.1regular-webfont.eot');
-    src: url('chatypeb2.1regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('chatypeb2.1regular-webfont.woff') format('woff'),
-         url('chatypeb2.1regular-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
 // Body
 body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue", "Helvetica", sans-serif;
