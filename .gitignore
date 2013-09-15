@@ -17,6 +17,3 @@
 
 # Ignore any environment variables that we set
 .env
-
-# Ignore the database file so that we dont share our credentials
-/config/database.yml
