@@ -1,5 +1,7 @@
 # ChattDevs
 
+[![Build Status](https://travis-ci.org/spyc3r/chattdevs.png)](https://travis-ci.org/spyc3r/chattdevs)
+
 ## About
 
 Chattdevs is a Rails powered, OAuth enabled user directory for all of the
