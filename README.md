@@ -13,7 +13,11 @@ forward:
     $ bundle install
     $ foreman start
 
-You should now have a running rails server with a seeded database.
+If you want to seed your database then just run:
+
+    $ rake db:populate
+    
+Now you should be good to go.
 
 ## Contributing
 
