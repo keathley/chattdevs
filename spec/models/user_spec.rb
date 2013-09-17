@@ -24,10 +24,7 @@ describe User do
   describe ".from_omniauth" do
 
     it "finds user if user exists" do
-      auth = { "provider" => user.provider,
-               "uid" => user.uid,
-               "info" => { "nickname" => user.name}
-             }
+      auth = oauth_response_for(user)
       new_user = User.from_omniauth(auth)
       new_user.should_not be_nil
     end
@@ -36,14 +33,7 @@ describe User do
   describe ".create_from_omniauth" do
 
     it "creates a new user" do
-      auth = {  "provider" => user.provider,
-                "uid" => user.uid,
-                "info" => {
-                  "nickname" => user.name,
-                  "email" => user.email,
-                  "name" => user.name
-                }
-             }
+      auth = oauth_response_for(user)
       new_user = User.create_from_omniauth(auth)
       new_user.should be_valid
     end
