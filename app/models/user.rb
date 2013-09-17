@@ -1,6 +1,12 @@
 class User < ActiveRecord::Base
   include FeatureFlags
 
+  validates :provider, :presence => true
+  validates :uid, :presence => true
+  validates :name, :presence => true
+  validates :email, :presence => true
+  validates :nickname, :presence => true
+
   def self.from_omniauth(auth)
     where(auth.slice("provider", "uid")).first || create_from_omniauth(auth)
   end

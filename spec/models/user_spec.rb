@@ -12,6 +12,12 @@ describe User do
   it { should have_db_column(:nickname) }
   it { should have_db_column(:admin) }
 
+  it { should validate_presence_of(:provider) }
+  it { should validate_presence_of(:uid) }
+  it { should validate_presence_of(:name) }
+  it { should validate_presence_of(:nickname) }
+  it { should validate_presence_of(:email) }
+
   specify { User.should respond_to(:from_omniauth) }
   specify { User.should respond_to(:create_from_omniauth) }
 
@@ -20,7 +26,7 @@ describe User do
     it "finds user if user exists" do
       auth = { "provider" => user.provider,
                "uid" => user.uid,
-               "info" => { :nickname => user.name}
+               "info" => { "nickname" => user.name}
              }
       new_user = User.from_omniauth(auth)
       new_user.should_not be_nil
@@ -30,9 +36,13 @@ describe User do
   describe ".create_from_omniauth" do
 
     it "creates a new user" do
-      auth = { "provider" => user.provider,
-               "uid" => user.uid,
-               "info" => { :nickname => user.name}
+      auth = {  "provider" => user.provider,
+                "uid" => user.uid,
+                "info" => {
+                  "nickname" => user.name,
+                  "email" => user.email,
+                  "name" => user.name
+                }
              }
       new_user = User.create_from_omniauth(auth)
       new_user.should be_valid
