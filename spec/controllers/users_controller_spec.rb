@@ -19,8 +19,6 @@ describe UsersController do
       User.should_receive(:page).and_call_original
       get :index
     end
-
-    it "should list the users in random order"
   end
 
   describe "GET #show" do

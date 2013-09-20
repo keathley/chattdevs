@@ -44,3 +44,14 @@ RSpec.configure do |config|
   # Include FactoryGirl methods
   config.include FactoryGirl::Syntax::Methods
 end
+
+OmniAuth.config.test_mode = true
+OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new({
+  "provider" => "github",
+  "uid" => "12345",
+  "info" => {
+    "nickname" => "Test",
+    "email" => "test@test.com",
+    "name" => "test user"
+  }
+})
