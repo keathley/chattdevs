@@ -4,6 +4,7 @@ Chattdevs::Application.routes.draw do
   resources :users, :only => [:show, :destroy] do
     get 'page/:page', :action => :index, :on => :collection
   end
+  resources :events, :only => [:index]
 
   get 'signout', :to => 'sessions#destroy'
   root 'users#index'

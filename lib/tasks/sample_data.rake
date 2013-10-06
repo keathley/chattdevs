@@ -7,11 +7,19 @@ end
 
 def make_users
   20.times do |n|
+    provider = "Github"
+    uid = "1234abd"
     name = Faker::Name.name
     email = "test-#{n}@test.com"
     nickname = "test#{n}"
-    
-    user = User.new(:name => name, :email => email, :nickname => nickname)
+
+    user = User.new(
+      :provider => provider,
+      :uid => uid,
+      :name => name,
+      :email => email,
+      :nickname => nickname
+    )
     user.save
   end
 end
