@@ -28,6 +28,8 @@ group :development, :test do
   gem 'sqlite3'
   gem 'factory_girl_rails', "~> 4.0"
   gem 'rspec-rails', "~> 2.12"
+  gem 'guard', '>=2.1.0'
+  gem 'guard-rspec'
 end
 
 group :test do

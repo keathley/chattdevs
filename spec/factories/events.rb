@@ -3,7 +3,7 @@
 FactoryGirl.define do
   factory :event do
     title "MyString"
-    description "MyText"
-    starting_at "2013-10-05 22:54:53"
+    starts_at "2013-10-05 22:54:53"
+    email "turing@chatdevs.com"
   end
 end
