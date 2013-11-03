@@ -11,6 +11,16 @@ describe EventsController do
     end
   end
 
+  describe "GET 'index'" do
+    let!(:e1) { create(:event, :approved => true) }
+    before do
+      Event.should_receive(:approved).and_call_original
+      get 'index'
+    end
+    it { should be_success }
+    specify { assigns(:events).should_not be_empty }
+  end
+
   describe "GET #new" do
     before do
       get :new

@@ -15,5 +15,7 @@ describe Event do
   it { should validate_presence_of(:email) }
   it { should validate_presence_of(:starts_at) }
 
+  specify { Event.should respond_to(:approved) }
+
   it { should be_valid }
 end
