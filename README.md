@@ -22,6 +22,12 @@ If you want to seed your database then just run:
     
 Now you should be good to go.
 
+## Running Tests
+
+In order to run the tests you need to prepare you test database:
+
+   $ rake db:test:prepare
+
 ## Contributing
 
 This project is community driven so if you have an idea or see something that
