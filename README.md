@@ -13,6 +13,7 @@ The app is currently running on Ruby 2.0 and Rails 4.  Installation is straight
 forward:
 
     $ bundle install
+    $ rake db:migrate
     $ foreman start
 
 If you want to seed your database then just run:
