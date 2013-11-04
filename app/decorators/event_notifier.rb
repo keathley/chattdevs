@@ -9,7 +9,7 @@ class EventNotifier
 
   private
 
-  def send_email_to_admin
+  def send_email_to_admins
     EventMailer.notify_admins(@event).deliver
   end
 end
