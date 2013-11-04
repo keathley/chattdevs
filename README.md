@@ -1,6 +1,7 @@
 # ChattDevs
 
 [![Build Status](https://travis-ci.org/spyc3r/chattdevs.png)](https://travis-ci.org/spyc3r/chattdevs)
+[![Code Climate](https://codeclimate.com/github/spyc3r/chattdevs.png)](https://codeclimate.com/github/spyc3r/chattdevs)
 
 ## About
 
