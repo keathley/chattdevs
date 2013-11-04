@@ -1,4 +1,5 @@
 class EventMailer < ActionMailer::Base
+  default :from => 'noreply@chattdevs.com'
 
   def notify_admins(event)
     @event = event

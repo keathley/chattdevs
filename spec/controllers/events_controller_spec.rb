@@ -17,6 +17,7 @@ describe EventsController do
       Event.should_receive(:approved).and_call_original
       get 'index'
     end
+
     it { should be_success }
     specify { assigns(:events).should_not be_empty }
   end
@@ -51,6 +52,7 @@ describe EventsController do
       end
 
       it { should redirect_to events_path }
+      specify { assigns(:event).should_not be_nil }
       specify { assigns(:event).errors.should be_empty }
     end
   end
