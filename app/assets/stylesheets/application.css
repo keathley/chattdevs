@@ -12,13 +12,3 @@
  *= require purecss
  *= require_tree .
  */
-
-input[type='submit'] {
-display:block;
-margin-top:20px;
-}
-
-label{
-display: block;
-margin-top: 20px;
-}
