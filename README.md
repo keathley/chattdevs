@@ -27,7 +27,7 @@ Now you should be good to go.
 
 In order to run the tests you need to prepare you test database:
 
-   $ rake db:test:prepare
+    $ rake db:test:prepare
 
 ## Contributing
 
