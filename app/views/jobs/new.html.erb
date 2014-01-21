@@ -1,13 +1,10 @@
-<%= form_for @job do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-  <%= f.label :company_name %>
-  <%= f.text_field :company_name %>
-  <%= f.label :company_website %>
-  <%= f.text_field :company_website %>
-  <%= f.label :how_to_apply %>
-  <%= f.text_field :how_to_apply %>
-  <%= f.submit %>
-<% end %>
+<div class="center">
+  <%= form_for @job do |f| %>
+    <%= f.text_field :title, :placeholder => "Job Title" %>
+    <%= f.text_area :description, :placeholder => "Job Description" %>
+    <%= f.text_field :company_name, :placeholder => "Company Name" %>
+    <%= f.text_field :company_website, :placeholder => "Company Website" %>
+    <%= f.text_field :how_to_apply, :placeholder => "How to apply" %>
+    <%= f.submit "Post a new job" %> <span>- listings are live for 30 days</span>
+  <% end %>
+</div>
