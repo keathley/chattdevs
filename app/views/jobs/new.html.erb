@@ -1,10 +1,36 @@
-<div class="center">
-  <%= form_for @job do |f| %>
-    <%= f.text_field :title, :placeholder => "Job Title" %>
-    <%= f.text_area :description, :placeholder => "Job Description" %>
-    <%= f.text_field :company_name, :placeholder => "Company Name" %>
-    <%= f.text_field :company_website, :placeholder => "Company Website" %>
-    <%= f.text_field :how_to_apply, :placeholder => "How to apply" %>
-    <%= f.submit "Post a new job" %> <span>- listings are live for 30 days</span>
+<div class="wrapper">
+  <p>
+    Your job listing will remain on the site for 30 days.  After 30 days your
+    job listing will be removed from the site.
+  </p>
+  <%= form_for @job, html: { class: 'pure-form pure-form-aligned' } do |f| %>
+    <fieldset>
+      <div class="pure-control-group">
+        <%= f.label :title, "Job Title" %>
+        <%= f.text_field :title, :placeholder => "Job Title", class: 'pure-input-1-2' %>
+      </div>
+      <div class="pure-control-group">
+        <%= f.label :description do %>
+          Job Description
+          <p class="small">Formatted with <%= link_to "Markdown", "http://daringfireball.net/projects/markdown/" %></p>
+        <% end %>
+        <%= f.text_area :description, :placeholder => "Job Description", class: 'pure-input-1-2' %>
+      </div>
+      <div class="pure-control-group">
+        <%= f.label :company_name, "Company Name" %>
+        <%= f.text_field :company_name, :placeholder => "Company Name", class: 'pure-input-1-2' %>
+      </div>
+      <div class="pure-control-group">
+        <%= f.label :company_website, "Company Website" %>
+        <%= f.text_field :company_website, :placeholder => "Company Website (Optional)", class: 'pure-input-1-2' %>
+      </div>
+      <div class="pure-control-group">
+        <%= f.label :how_to_apply, "How to apply" %>
+        <%= f.text_area :how_to_apply, :placeholder => "How to apply", class: 'pure-input-1-2' %>
+      </div>
+      <div class="pure-controls">
+        <%= f.submit "Post a new job", class: 'pure-button pure-button-danger' %>
+      </div>
+    </fieldset>
   <% end %>
 </div>

@@ -44,9 +44,7 @@ body {
 
 // Content
 .content {
-  // margin: 0 auto;
-  // max-width: $max-width;
-  // min-width: $min-width;
+  font-size: 16pt;
 }
 
 // Header
@@ -85,6 +83,7 @@ body {
   .nav {
     list-style: none;
     padding: 2px;
+    font-size: 14pt;
 
     li {
       padding-right: 15px;
@@ -197,15 +196,10 @@ body {
           @media screen and (max-width: 1024px) {
             font-size: 14pt;
           }
-
-          // @media screen and (max-width: 660px) {
-          //   font-size: 12pt;
-          // }
         }
       }
 
       .user-link:hover {
-
         .user-info {
           opacity: 1;
         }
@@ -238,10 +232,12 @@ body {
       }
     }
   }
+}
 
-  .profile-settings {
-
-  }
+.wrapper {
+  max-width: 1080px;
+  min-width: 720px;
+  margin: 0 auto;
 }
 
 // Misc.
@@ -254,8 +250,37 @@ body {
   float: right;
 }
 
+.pure-button {
+  color: white;
+  font-size: 14pt;
+}
+
 .pure-button-error {
   background: rgb(202, 60, 60);
+}
+
+.pure-button-primary {
+  background: #0e90d2;
+}
+
+.pure-button-accent {
+  background: rgb(128, 88, 165);
+}
+
+.pure-button-info {
+  background: #5eb95e;
+}
+
+.pure-button-danger {
+  background: #dd514c;
+}
+
+.pure-button-action {
+  background: rgb(243, 123, 29);
+}
+
+.pure-button-warning {
+  background: rgb(250, 210, 50);
 }
 
 nav.pagination {

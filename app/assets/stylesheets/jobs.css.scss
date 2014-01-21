@@ -2,7 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.center {
-  width: 928px;
-  margin: 0px auto;
+#new_job {
+
+  textarea {
+    resize: vertical;
+  }
+
+  textarea#job_description {
+    min-height: 100px;
+  }
+
+  textarea#how_to_apply {
+    min-height: 75px;
+  }
+
+  .small {
+    font-size: 8pt;
+    margin-top: 7px;
+  }
 }
