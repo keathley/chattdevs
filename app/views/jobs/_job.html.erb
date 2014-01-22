@@ -1,3 +1,5 @@
-<li>
-  <h3><%= link_to job.title, job_path(job) %></h3>
+<li class="job">
+  <span class="company"><%= job.company_name%></span>
+  <span class="title"><%= link_to job.title, job_path(job) %></span>
+  <span class="posted-at"><%= job.created_at.strftime("%B %d") %></span>
 </li>

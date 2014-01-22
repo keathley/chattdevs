@@ -2,6 +2,73 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.jobs {
+  padding-bottom: 40px;
+
+  #jobs-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .job {
+      font-size: 16pt;
+      padding: 15px;
+      border-bottom: 1px solid #ccc;
+
+      &:hover {
+        background-color: #F7F7F7;
+      }
+
+      .title {
+      }
+
+      .company {
+        font-weight: bold;
+        margin-right: 10px;
+      }
+
+      .posted-at {
+        float: right;
+        color: #636363;
+      }
+    }
+
+    a {
+      color: #0e90d2;
+    }
+  }
+}
+
+#job {
+
+  a {
+    color: #0e90d2;
+  }
+
+  .company-details {
+
+    .company-name {
+      font-size: 18pt;
+      margin-bottom: 0px;
+    }
+
+    .company-website {
+      font-size: 14pt;
+      margin-top: 0px;
+    }
+  }
+
+  .how-to-apply {
+    h4 {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-top: 5px;
+    }
+  }
+}
+
 #new_job {
 
   textarea {

@@ -34,10 +34,11 @@ def make_jobs
     "Pro Hacker",
     "Programmer"
   ]
+
   20.times do |n|
     job = Job.new(
       title: positions.sample,
-      description: Faker::Company.bs,
+      description: "#{Faker::Lorem.paragraph}",
       company_name: Faker::Company.name,
       company_website: Faker::Internet.domain_name,
       how_to_apply: "Send an email to #{Faker::Internet.email}"
