@@ -18,6 +18,12 @@ describe JobsController do
       get :index
       assigns(:jobs).count.should eq(1)
     end
+
+    it "should only display jobs that are approved" do
+      unapproved_job = create(:job, :approved => false)
+      get :index
+      assigns(:jobs).count.should eq(1)
+    end
   end
 
   describe "GET #show" do

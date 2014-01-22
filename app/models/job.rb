@@ -7,4 +7,8 @@ class Job < ActiveRecord::Base
   def self.alive
     where('created_at > ?', 30.days.ago)
   end
+
+  def self.approved
+    where(:approved => true)
+  end
 end
