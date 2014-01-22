@@ -12,6 +12,8 @@ describe JobsController do
 
     it { should be_success }
     specify { assigns(:jobs).should_not be_empty }
+
+    it "should only display jobs that are current"
   end
 
   describe "GET #show" do
@@ -33,13 +35,26 @@ describe JobsController do
   end
 
   describe "POST 'create'" do
-    before do
-      post :create, :job => attributes_for(:job)
+    context "when job is valid" do
+      before do
+        post :create, :job => attributes_for(:job)
+      end
+
+      it { should redirect_to jobs_path }
+      specify { assigns(:job).should_not be_nil }
+      specify { assigns(:job).errors.should be_empty }
     end
 
-    it { should redirect_to jobs_path }
-    specify { assigns(:job).should_not be_nil }
-    specify { assigns(:job).errors.should be_empty }
-  end
+    context "when job is invalid" do
+      before do
+        post :create, :job => {
+          title: "Super Awesome Senior Dev position"
+        }
+      end
 
+      it { should_not redirect_to jobs_path }
+      specify { assigns(:job).should_not be_nil }
+      specify { assigns(:job).errors.should_not be_empty }
+    end
+  end
 end
