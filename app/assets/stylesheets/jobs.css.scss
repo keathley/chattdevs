@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .jobs {
-  padding-bottom: 40px;
+  padding-bottom: 100px;
 
   #jobs-list {
     list-style: none;
@@ -37,6 +37,10 @@
       color: #0e90d2;
     }
   }
+}
+
+.new-job {
+  padding-bottom: 20px;
 }
 
 #job {

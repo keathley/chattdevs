@@ -13,7 +13,11 @@ describe JobsController do
     it { should be_success }
     specify { assigns(:jobs).should_not be_empty }
 
-    it "should only display jobs that are current"
+    it "should only display jobs that are current" do
+      old_job = create(:job, :created_at => 30.days.ago)
+      get :index
+      assigns(:jobs).count.should eq(1)
+    end
   end
 
   describe "GET #show" do

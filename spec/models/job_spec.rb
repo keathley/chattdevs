@@ -15,4 +15,6 @@ describe Job do
   it { should validate_presence_of(:description) }
   it { should validate_presence_of(:company_name) }
   it { should validate_presence_of(:how_to_apply) }
+
+  specify { Job.should respond_to(:alive) }
 end
