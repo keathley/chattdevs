@@ -6,6 +6,7 @@ Chattdevs::Application.routes.draw do
     get 'page/:page', :action => :index, :on => :collection
   end
   resources :events, :only => [:index, :new, :create]
+  resources :jobs, :only => [:index, :new, :create, :show]
 
   get 'signout', :to => 'sessions#destroy'
   root 'users#index'

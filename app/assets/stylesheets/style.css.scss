@@ -1,5 +1,5 @@
 // Variables and Mixins
-$max-width: 1200px;
+$max-width: 1080px;
 $min-width: 720px;
 $image-size: 190px;
 
@@ -44,24 +44,21 @@ body {
 
 // Content
 .content {
-  margin: 0 auto;
-  max-width: $max-width;
-  min-width: $min-width;
-  padding: 0 50px;
-
-  .inner-container {
-    float: left;
-    width: 100%;
-    padding: 0 0 75px 0;
-  }
+  font-size: 16pt;
 }
 
 // Header
 .header {
+  text-align: center;
   margin: 0 auto;
   max-width: $max-width;
   min-width: $min-width;
   margin-top: 35px;
+
+  @media screen and (max-width: 660px) {
+    min-width: 0;
+    margin-top: 0px;
+  }
 
   a {
     color: #575F5F;
@@ -77,11 +74,16 @@ body {
     font-family: 'ChatypeB2.1BoldBold';
     line-height: 1;
     padding: 30px 0 0;
+
+    @media screen and (max-width: 660px) {
+      font-size: 36pt;
+    }
   }
 
   .nav {
     list-style: none;
     padding: 2px;
+    font-size: 14pt;
 
     li {
       padding-right: 15px;
@@ -130,6 +132,10 @@ body {
     padding-right: 10px;
     font-size: 14px;
 
+    @media screen and (max-width: 660px) {
+      display: none;
+    }
+
     a {
       color: #bfbfbf;
       // text-decoration: none;
@@ -140,39 +146,60 @@ body {
 // User
 .users-list {
   list-style: none;
-  padding-left: 0;
+  max-width: $max-width;
+  min-width: $min-width;
+  margin: 0 auto;
+  padding: 0 0 80px 0;
+  overflow: hidden;
+
+  @media screen and (max-width: 1024px) {
+    min-width: 0;
+  }
 
   .user {
-    float: left;
+    text-align: center;
+    width: 20%;
     position: relative;
-    margin: 0 20px 20px 0;
+    float: left;
+    margin-bottom: 15px;
+
+    @media screen and (max-width: 1024px) {
+      width: 25%;
+    }
+
+    @media screen and (max-width: 660px) {
+      width: 100%;
+    }
 
     .user-data {
       text-align: center;
 
+      a {
+        text-decoration: none;
+      }
+
       .user-info {
-        // display: none;
         opacity: 0;
-        background: rgba(0, 0, 0, 0.7);
-        padding: 15px 0;
-        position: absolute;
-        left: 0;
-        width: $image-size;
-        bottom: 3px;
+        padding: 2px 0;
+        position: relative;
         border-bottom-right-radius: 2px;
         border-bottom-left-radius: 2px;
         transition: opacity .25s ease-in-out;
+        text-decoration: none;
         -moz-transition: opacity .25s ease-in-out;
         -webkit-transition: opacity .25s ease-in-out;
 
         .user-info-name {
-          color: white;
-          text-decoration: none;
+          color: #2C2C2C;
+          font-size: 16pt;
+
+          @media screen and (max-width: 1024px) {
+            font-size: 14pt;
+          }
         }
       }
 
       .user-link:hover {
-
         .user-info {
           opacity: 1;
         }
@@ -205,10 +232,12 @@ body {
       }
     }
   }
+}
 
-  .profile-settings {
-
-  }
+.wrapper {
+  max-width: 1080px;
+  min-width: 720px;
+  margin: 0 auto;
 }
 
 // Misc.
@@ -221,8 +250,37 @@ body {
   float: right;
 }
 
+.pure-button {
+  color: white;
+  font-size: 14pt;
+}
+
 .pure-button-error {
   background: rgb(202, 60, 60);
+}
+
+.pure-button-primary {
+  background: #0e90d2;
+}
+
+.pure-button-accent {
+  background: rgb(128, 88, 165);
+}
+
+.pure-button-info {
+  background: #5eb95e;
+}
+
+.pure-button-danger {
+  background: #dd514c;
+}
+
+.pure-button-action {
+  background: rgb(243, 123, 29);
+}
+
+.pure-button-warning {
+  background: rgb(250, 210, 50);
 }
 
 nav.pagination {
@@ -230,11 +288,11 @@ nav.pagination {
 }
 
 input[type='submit'] {
-display:block;
-margin-top:20px;
+  display:block;
+  margin-top:20px;
 }
 
 label{
-display: block;
-margin-top: 20px;
+  display: block;
+  margin-top: 20px;
 }

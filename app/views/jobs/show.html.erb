@@ -1,0 +1,28 @@
+<div class="wrapper">
+  <div id="job">
+    <h1><%= @job.title %></h1>
+    <div class="company-details">
+      <h3 class="company-name">
+        <%= @job.company_name %>
+      </h3>
+      <h4 class="company-website">
+        <% if @job.company_website %>
+          <%= link_to "#{@job.company_website}",
+                      @job.company_website,
+                      class: 'website' %>
+        <% end %>
+      </h4>
+    </div>
+    <div class="job-description">
+      <p>
+        <%= @job.description %>
+      </p>
+    </div>
+    <div class="how-to-apply">
+      <h4>How To Apply</h4>
+      <p>
+        <%= @job.how_to_apply %>
+      </p>
+    </div>
+  </div>
+</div>

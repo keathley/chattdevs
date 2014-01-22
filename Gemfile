@@ -30,6 +30,7 @@ group :development, :test do
   gem 'rspec-rails', "~> 2.12"
   gem 'guard', '>=2.1.0'
   gem 'guard-rspec'
+  gem 'zeus'
 end
 
 group :test do

@@ -5,13 +5,6 @@ describe EventsController do
   subject { response }
 
   describe "GET 'index'" do
-    it "returns http success" do
-      get 'index'
-      response.should be_success
-    end
-  end
-
-  describe "GET 'index'" do
     let!(:e1) { create(:event, :approved => true) }
     before do
       Event.should_receive(:approved).and_call_original
