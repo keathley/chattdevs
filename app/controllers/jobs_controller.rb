@@ -4,7 +4,7 @@ class JobsController < ApplicationController
   end
 
   def show
-    @job = Job.find(params[:id])
+    @job = find_job
   end
 
   def new
@@ -22,6 +22,14 @@ class JobsController < ApplicationController
   end
 
   private
+
+  def find_job
+    begin
+      Job.alive.approved.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      redirect_to jobs_path
+    end
+  end
 
   def job_params
     params.require(:job).permit(

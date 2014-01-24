@@ -33,6 +33,12 @@ describe JobsController do
 
     it { should be_success }
     specify { assigns(:job).should_not be_nil }
+
+    it "should only display jobs that are current" do
+      unapproved_job = create(:job, :approved => false)
+      get :show, :id => unapproved_job.id
+      subject.should redirect_to(jobs_path)
+    end
   end
 
   describe "GET 'new'" do
