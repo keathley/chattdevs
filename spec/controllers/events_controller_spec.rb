@@ -4,6 +4,12 @@ describe EventsController do
 
   subject { response }
 
+  # We need to mock out the feature flag to allow our tests to still run
+  # correctly.
+  before do
+    controller.stub(:events_enabled?) { true }
+  end
+
   describe "GET 'index'" do
     let!(:e1) { create(:event, :approved => true) }
     before do

@@ -1,4 +1,6 @@
 class EventsController < ApplicationController
+  before_action :ensure_events_enabled
+
   def index
     @events = Event.approved
   end
@@ -21,5 +23,9 @@ class EventsController < ApplicationController
 
   def event_params
     params.require(:event).permit(:title, :starts_at, :email, :link)
+  end
+
+  def ensure_events_enabled
+    not_found unless events_enabled?
   end
 end
