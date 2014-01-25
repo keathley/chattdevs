@@ -13,7 +13,7 @@ describe AdminMailer do
     end
 
     it "renders the sender email" do
-      mail.to.should == ["chattanoogadeveloper@gmail.com"]
+      mail.to.should == ["spyc3r+chattdevs@gmail.com"]
     end
   end
 end
