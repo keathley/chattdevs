@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
   def index
-    @jobs = Job.alive.approved
+    @jobs = Job.alive.approved.reversed
   end
 
   def show
@@ -27,7 +27,7 @@ class JobsController < ApplicationController
     begin
       Job.alive.approved.find(params[:id])
     rescue ActiveRecord::RecordNotFound
-      redirect_to jobs_path
+      not_found
     end
   end
 

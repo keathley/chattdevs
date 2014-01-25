@@ -19,4 +19,13 @@ describe Job do
 
   specify { Job.should respond_to(:alive) }
   specify { Job.should respond_to(:approved) }
+  specify { Job.should respond_to(:reversed) }
+
+  describe "#approved!" do
+    it "should mark the job as approved" do
+      subject.update_attributes(:approved => false)
+      subject.approved!
+      subject.approved.should be_true
+    end
+  end
 end

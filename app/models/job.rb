@@ -11,4 +11,12 @@ class Job < ActiveRecord::Base
   def self.approved
     where(:approved => true)
   end
+
+  def self.reversed
+    order("created_at DESC")
+  end
+
+  def approved!
+    update_attribute(:approved, true)
+  end
 end
