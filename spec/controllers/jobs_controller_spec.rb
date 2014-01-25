@@ -60,6 +60,12 @@ describe JobsController do
       it { should redirect_to jobs_path }
       specify { assigns(:job).should_not be_nil }
       specify { assigns(:job).errors.should be_empty }
+
+      it "should send out an email" do
+        expect {
+          post :create, :job => attributes_for(:job)
+        }.to change { ActionMailer::Base.deliveries.size }.by(1)
+      end
     end
 
     context "when job is invalid" do
