@@ -1,5 +1,5 @@
 class AdminMailer < ActionMailer::Base
-  default from: "noreply@chattdevs.com"
+  default from: "spyc3r+chattdevs@gmail.com"
 
   def new_job_posting(job)
     @job = job
