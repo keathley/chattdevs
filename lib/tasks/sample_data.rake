@@ -26,18 +26,9 @@ def make_users
 end
 
 def make_jobs
-  positions = [
-    "Senior Developer",
-    "Junior Developer",
-    "Code Ninja",
-    "Code Surfer",
-    "Pro Hacker",
-    "Programmer"
-  ]
-
   20.times do |n|
     job = Job.new(
-      title: positions.sample,
+      title: Faker::Name.title,
       description: "#{Faker::Lorem.paragraph}",
       company_name: Faker::Company.name,
       company_website: Faker::Internet.domain_name,
