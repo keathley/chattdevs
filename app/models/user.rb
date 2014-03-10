@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-  include FeatureFlags
 
   validates :provider, :presence => true
   validates :uid, :presence => true

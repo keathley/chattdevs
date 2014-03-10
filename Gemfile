@@ -15,6 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'purecss-rails'
+gem 'redcarpet'
 
 # Misc.
 gem 'faker'
@@ -28,6 +29,9 @@ group :development, :test do
   gem 'sqlite3'
   gem 'factory_girl_rails', "~> 4.0"
   gem 'rspec-rails', "~> 2.12"
+  gem 'guard', '>=2.1.0'
+  gem 'guard-rspec'
+  gem 'zeus'
 end
 
 group :test do

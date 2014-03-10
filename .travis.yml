@@ -1,3 +1,11 @@
 language: ruby
 rvm:
-  - "2.0.0"
+- 2.0.0
+deploy:
+  provider: heroku
+  api_key:
+    secure: THyVZi9gLOSdgnbxfhwkygrn8Fm2vw75QlLZR1FI+Qaz8ep79odo3X6jhkN+5g+aVRzQPNK/569JqGJE96ZJyVSAcsI0sjRuU/hfDtroGk7mLhYnk13XzIG4MUXdSyYh+Rbu6uOXx8+ULagootD+husmDHimc+hmrY6QPMn7+Hc=
+  app: chattdevs
+  run: "rake db:migrate"
+  on:
+    repo: spyc3r/chattdevs

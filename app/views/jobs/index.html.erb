@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <div class="new-job">
+    <%= link_to(
+      'Post a New Job',
+      new_job_path,
+      class: 'pure-button pure-button-danger'
+      ) %>
+  </div>
+  <div class="jobs">
+    <ul id="jobs-list">
+      <%= render @jobs %>
+    </ul>
+  </div>
+</div>
