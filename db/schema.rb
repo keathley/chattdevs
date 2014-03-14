@@ -11,17 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140122191858) do
-
-  create_table "events", force: true do |t|
-    t.string   "title"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "email"
-    t.datetime "starts_at"
-    t.string   "link"
-    t.boolean  "approved",   default: false
-  end
+ActiveRecord::Schema.define(version: 20140314224411) do
 
   create_table "jobs", force: true do |t|
     t.string   "title"
