@@ -1,6 +1,8 @@
 language: ruby
 rvm:
 - 2.1.0
+before_script:
+  - rake db:migrate RAILS_ENV=test
 deploy:
   provider: heroku
   api_key:
