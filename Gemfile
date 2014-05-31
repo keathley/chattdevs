@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.1.0'
 
-gem 'rails', '4.0.0'
+gem 'rails', '4.1.1'
 gem 'unicorn'
 gem 'jbuilder', '~> 1.2'
 gem 'omniauth'
@@ -28,10 +28,9 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'factory_girl_rails', "~> 4.0"
-  gem 'rspec-rails', "~> 2.12"
+  gem 'rspec-rails', "~> 3.0.0.beta"
   gem 'guard', '>=2.1.0'
   gem 'guard-rspec'
-  gem 'zeus'
 end
 
 group :test do

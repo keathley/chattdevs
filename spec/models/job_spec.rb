@@ -25,7 +25,7 @@ describe Job do
     it "should mark the job as approved" do
       subject.update_attributes(:approved => false)
       subject.approved!
-      subject.approved.should be_true
+      subject.approved?.should == true
     end
   end
 end
