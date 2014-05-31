@@ -28,10 +28,9 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'factory_girl_rails', "~> 4.0"
-  gem 'rspec-rails', "~> 2.12"
+  gem 'rspec-rails', "~> 3.0.0.beta"
   gem 'guard', '>=2.1.0'
   gem 'guard-rspec'
-  gem 'zeus'
 end
 
 group :test do
