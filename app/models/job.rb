@@ -17,6 +17,6 @@ class Job < ActiveRecord::Base
   end
 
   def approved!
-    update_attribute(:approved, true)
+    update_attributes(:approved => true)
   end
 end
